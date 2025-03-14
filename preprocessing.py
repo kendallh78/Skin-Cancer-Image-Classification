@@ -214,16 +214,16 @@ def get_data_loaders(config):
     overlap_train_test = train_set.intersection(test_set)
     overlap_val_test = val_set.intersection(test_set)
 
-    print(f"✅ Train: {len(train_set)}, Val: {len(val_set)}, Test: {len(test_set)}")
-    print(f"⚠️ Overlap between Train & Val: {len(overlap_train_val)} images")
-    print(f"⚠️ Overlap between Train & Test: {len(overlap_train_test)} images")
-    print(f"⚠️ Overlap between Val & Test: {len(overlap_val_test)} images")
+    print(f" Train: {len(train_set)}, Val: {len(val_set)}, Test: {len(test_set)}")
+    print(f"Overlap between Train & Val: {len(overlap_train_val)} images")
+    print(f"Overlap between Train & Test: {len(overlap_train_test)} images")
+    print(f"Overlap between Val & Test: {len(overlap_val_test)} images")
 
     if overlap_train_val or overlap_train_test or overlap_val_test:
-        print("🚨 WARNING: Data leakage detected! Fix your dataset splitting.")
+        print("WARNING: Data leakage detected!")
         exit()
     else:
-        print("✅ No data leakage detected.")
+        print("No data leakage detected.")
 
     train_transform, val_test_transform = get_transforms(config.IMG_SIZE)
 
@@ -235,7 +235,7 @@ def get_data_loaders(config):
         'train_loader': DataLoader(train_dataset, batch_size=config.BATCH_SIZE, shuffle=True,
                                    num_workers=config.NUM_WORKERS, pin_memory=config.PIN_MEMORY),
         'val_loader': DataLoader(val_dataset, batch_size=config.BATCH_SIZE, shuffle=False,
-                                 num_workers=config.NUM_WORKERS, pin_memory=config.PIN_MEMORY),  # ✅ Added
+                                 num_workers=config.NUM_WORKERS, pin_memory=config.PIN_MEMORY),  
         'test_loader': DataLoader(test_dataset, batch_size=config.BATCH_SIZE, shuffle=False,
                                   num_workers=config.NUM_WORKERS, pin_memory=config.PIN_MEMORY),
     }
