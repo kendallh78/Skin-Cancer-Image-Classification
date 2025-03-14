@@ -166,4 +166,5 @@ Comprehensive metrics reported:
 - Optimized threshold for better classification
 - Per-class performance metrics
 
+## Inspiration for Model Choice
 - https://bmcmedimaging.biomedcentral.com/articles/10.1186/s12880-022-00793-7
