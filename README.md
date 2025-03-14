@@ -166,6 +166,4 @@ Comprehensive metrics reported:
 - Optimized threshold for better classification
 - Per-class performance metrics
 
-
-- Dataset source: [Add your dataset source here]
-- Inspired by approaches in dermatological image analysis research
+- https://bmcmedimaging.biomedcentral.com/articles/10.1186/s12880-022-00793-7
