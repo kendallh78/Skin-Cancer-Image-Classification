@@ -5,7 +5,7 @@ A deep learning model for classifying skin lesions as benign or malignant, using
 ## Overview
 
 This project implements a skin lesion classification pipeline that:
-- Preprocesses dermoscopic images to remove artifacts (hair, rulers, borders)
+- Preprocesses dermoscopic images to remove artifacts (hair, borders)
 - Uses transfer learning with EfficientNet-B0 or ResNet18
 - Implements multiple techniques to prevent overfitting and improve performance
 - Provides detailed metrics, visualizations and threshold optimization
